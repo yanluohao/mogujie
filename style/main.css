@@ -265,6 +265,9 @@
 	font-size: 14px;
 	font-weight: bold;
 }
+.navlist{
+	float: left;
+}
 .navlist ul{
 	z-index: 9;
 	width: 223px;
@@ -274,12 +277,16 @@
 	border-right: 1px solid #ff0000;
 	float: left;
 }
+.navlist>ul>li>a{
+	white-space: nowrap;
+}
 .navlist ul li{
 	z-index: 99;
 	width: 223px;
 	height: 39px;
 	line-height: 39px;
 	position: relative;
+
 }
 .navlist ul li:last-child{
 	height: 40px;
@@ -294,7 +301,7 @@
 .navlist ul li a {
 	font-size: 12px;
 	color: #666;
-	padding: 0 10px;
+	padding: 0 8px;
 }
 .navlist ul li a:hover{
 	text-decoration: underline;
@@ -672,6 +679,9 @@
 	height: 500px;
 	float: left;
 	margin-top: 15px;
+}
+.brandproducts>a{
+	float: left;
 }
 .brandproducts>a>img{
 	float: left;

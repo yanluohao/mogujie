@@ -171,7 +171,7 @@ $(function(){
     })
 
     function fixedheader(){
-    	var t=parseInt($(document.body).scrollTop());
+    	var t=parseInt($("body,html").scrollTop());
     	if(t>700){
     		$("#fixheader").slideDown();                       //固定定位的搜索框
     	}
