@@ -180,6 +180,13 @@ $(function(){
     	}
     }
     time_02=setInterval(fixedheader, 100);
+    //在firefox下，该ul下偏1px,其他浏览器没有该问题;
+    function firefox(){
+    	if(navigator.userAgent.indexOf('Firefox') >= 0){
+    		$(".navlist ul").css("margin-top","-1px")
+    	}
+    }
+    firefox();
 
 })
 
