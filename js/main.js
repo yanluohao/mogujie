@@ -171,22 +171,25 @@ $(function(){
     })
 
     function fixedheader(){
-    	var t=parseInt($("body,html").scrollTop());
-    	if(t>700){
+        var sTop=document.body.scrollTop||document.documentElement.scrollTop;
+    	var t=parseInt(sTop);
+    	if(t>800){
     		$("#fixheader").slideDown();                       //固定定位的搜索框
     	}
     	else{
     		$("#fixheader").slideUp();
     	}
     }
-    time_02=setInterval(fixedheader, 100);
-    //在firefox下，该ul下偏1px,其他浏览器没有该问题;
-    function firefox(){
-    	if(navigator.userAgent.indexOf('Firefox') >= 0){
-    		$(".navlist ul").css("margin-top","-1px")
-    	}
+    window.onscroll=function(){
+        fixedheader();
     }
-    firefox();
-
+    
+    //firefox下ul下偏1px调整;
+    function fox(){
+        if(navigator.userAgent.indexOf("Firefox")>0){
+            $(".navlist ul").css("margin-top","-1px");
+        }
+    }
+    fox();
 })
 
