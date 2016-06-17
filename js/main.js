@@ -186,9 +186,9 @@ $(function(){
     
     //firefox下ul下偏1px调整;
     function fox(){
-        if(navigator.userAgent.indexOf("Firefox")>0){
+        if(navigator.userAgent.indexOf("Firefox")>0||navigator.userAgent.indexOf("IE")>0){
             $(".navlist ul").css("margin-top","-1px");
-        }
+        };
     }
     fox();
 })
